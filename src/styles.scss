@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+*,
+*::before,
+*::after{
+   
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+
+
+:root{
+    --color-primary: #2C3878;
+    --color-gray: #FFFFFF;
+    --color-nav: #333333;
+    --color-gray-1: #9C9C9C;
+    --color-gray-2: #D9D9D9;
+
+    --font-family-primary: 'Poppins', sans-serif;
+    --font-family-body: var(--font-family-primary);
+    --font-family-heading: var(--font-family-primary);
+
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+
+    --font-size-nav: 1.2rem;
+    --font-size-body: 1.125rem;
+    --font-size-bold: 2.25rem;
+    --font-size-subhead: 1.5rem;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    line-height: 1.5;
+}

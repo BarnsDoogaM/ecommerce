@@ -1,0 +1,96 @@
+.header {
+    // background-color: rgb(224, 200, 200);
+    min-height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    font-size: 1.4rem;
+
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        align-items: center;
+        padding: 0 2rem;
+        align-self: center;
+        margin: 0rem 2rem;
+        min-height: 8vh;
+        box-shadow: 0 .1rem .1rem rgba(0, 0, 0, .5);
+    }
+
+    &__online {
+
+        & a {
+            font-size: 2.5rem;
+            text-decoration: none;
+        }
+    }
+
+    &__input {
+        width: 15%;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        overflow: hidden;
+        border-radius: 10px;
+        border: 1px solid gray;
+
+        & span {
+            font-size: 1.7rem;
+            padding-left: .3rem;
+            font-weight: 400;
+            color: rgb(177, 163, 163);
+        }
+    }
+
+    &__form {
+        width: 100%;
+
+    }
+
+    &__first-form {
+        width: 100%;
+        overflow: hidden;
+
+        & input {
+            width: 100%;
+            padding: 1.5rem;
+            outline: none;
+            border: none;
+
+            &::placeholder {
+                font-size: 1.5rem;
+            }
+
+        }
+    }
+
+    &__cart {
+        & a {
+            font-size: 4rem;
+            color: black;
+            position: relative;
+        }
+
+        & p{
+            
+            background-color: purple;
+            // padding: 2rem;
+            top: 1rem;
+            right: 3rem;
+            height: 2rem;
+            text-align: center;
+            width: 2rem;
+            border-radius: 50px;
+            font-size: 2rem;
+            position: absolute;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
