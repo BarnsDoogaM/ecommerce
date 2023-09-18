@@ -1,0 +1,91 @@
+
+
+<section class="form">
+    <div class="form__section">
+        <form [formGroup]="paymentForm" (ngSubmit)="save()">
+            <p>Enter your card details</p>
+            <div class="form__container">
+
+                <label for="cardNumber">Card Number</label>
+                <input type="text" placeholder="Please enter card number" formControlName="cardNumber"
+                [ngClass]="{'invalid': (paymentForm.get('cardNumber').touched || paymentForm.get('cardNumber').dirty)
+                && !paymentForm.get('cardNumber').valid }"
+                 class="form__input">
+
+
+                 <span class="form__form__IsInvalid" *ngIf="paymentForm.get('cardNumber').errors?.['required'] && paymentForm.get('cardNumber').touched">
+                    card number required
+                </span>
+                <span class="form__IsInvalid" *ngIf="paymentForm.get('cardNumber').errors?.['minlength']">
+                    invalid card number
+                </span>
+                <span class="form__IsInvalid" *ngIf="paymentForm.get('cardNumber').errors?.['maxlength']">
+                    card number exceeded Please enter 4 characters
+                </span>
+    
+            </div>
+           
+            <div class="form__expiry">
+                <div class="form__container form__container--different  form__container--one">
+                    <label for="">Expiry Date</label>
+                    <input class="form__input form__input--expirydate" placeholder="Please enter expiry date"
+                    [ngClass]="{'invalid': (paymentForm.get('expiryDate').touched ||
+                    paymentForm.get('expiryDate').dirty) && !paymentForm.get('expiryDate').valid}" type="text" formControlName="expiryDate">
+                   
+                    <span class="form__IsInvalid" *ngIf="paymentForm.get('expiryDate').errors?.['required'] && paymentForm.get('expiryDate').touched">
+                        expiry Date required
+                    </span>
+                    <span class="form__IsInvalid" *ngIf="paymentForm.get('expiryDate').errors?.['minlength']">
+                        invalid expiry date
+                    </span>
+                </div>
+                <div class="form__container form__container--different form__container--two">
+                    <label for="">CVV</label>
+                    <input class="form__input form__input--cvv"
+                    [ngClass]="{'invalid': (paymentForm.get('cvv').touched ||
+                    paymentForm.get('cvv').dirty) && !paymentForm.get('cvv').valid}"  placeholder="Please enter cvv" type="text" formControlName="cvv">
+                    <span class="form__IsInvalid" *ngIf="paymentForm.get('cvv').errors?.['required'] && paymentForm.get('cvv').touched">
+                        card cvv required
+                    </span>
+                    <span class="form__IsInvalid" *ngIf="paymentForm.get('cvv').errors?.['minlength']">
+                        invalid card cvv
+                    </span>
+                </div>
+            </div>
+
+            <div class="form__container">
+                <label for="">Order Summary</label>
+                <input class="form__input" type="text" placeholder="Please enter Order Summary"
+                [ngClass]="{'invalid': (paymentForm.get('OrderSummary').touched ||
+                paymentForm.get('OrderSummary').dirty) && !paymentForm.get('OrderSummary').valid}" formControlName="OrderSummary">
+                <span class="form__IsInvalid" *ngIf="paymentForm.get('OrderSummary').errors?.['required'] && paymentForm.get('OrderSummary').touched">
+                    Order Summary required
+                </span>
+                <span class="form__IsInvalid" *ngIf="paymentForm.get('OrderSummary').errors?.['minlength']">
+                    Please enter detailed summary
+                </span>
+    
+            </div>
+
+            <div class="form__container">
+                <label for="">Shipping Address</label>
+                <input class="form__input"  placeholder="Please enter shipping Address" [ngClass]="{'invalid': (paymentForm.get('shippingAddress').touched ||
+                paymentForm.get('shippingAddress').dirty) && !paymentForm.get('shippingAddress').valid}" type="text" formControlName="shippingAddress">
+                <span class="form__IsInvalid" *ngIf="paymentForm.get('shippingAddress').errors?.['required'] && paymentForm.get('shippingAddress').touched">
+                     shipping Address required
+                </span>
+                <span class="form__IsInvalid" *ngIf="paymentForm.get('shippingAddress').errors?.['minlength']">
+                     shipping detailed Address
+                </span>
+            </div>
+
+            <div class="form__container">
+                <label for="">PayMent Summary</label>
+                <input class="form__input" type="text" placeholder="cost tax deliver total">
+            </div>
+            <button class="form__btn form__btn-primary"  routerLink="/success"
+        [title]="paymentForm.valid ? 'save you changes in the database' :'fill all the invalid fields' " 
+        [disabled]="!paymentForm.valid">PAY</button>
+        </form>
+    </div>
+</section>

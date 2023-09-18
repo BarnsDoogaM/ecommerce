@@ -7,6 +7,11 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products/products.component';
 import { CartComponent } from './cart/cart.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DetailsComponent } from './details/details.component';
+import { SuccessComponent } from './success/success.component';
+import { ErrorComponent } from './error/error.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -16,11 +21,16 @@ import { CartComponent } from './cart/cart.component';
     LoginComponent,
     ProductsComponent,
     CartComponent,
+    DetailsComponent,
+    SuccessComponent,
+    ErrorComponent,
+    PaymentComponent,
   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,84 @@
+.container {
+    margin-top: 7rem;
+    overflow-y: hidden;
+
+    &__details {
+        display: flex;
+    }
+
+    &__images {
+        width: 50%;
+        display: flex;
+        // border: 1px solid red;
+        min-height: 50vh;
+        margin: 2rem;
+        box-shadow: 0 0 .3rem rgba(0,0,0, .5);
+    }
+
+    &__first-img {
+        width: 80%;
+        // border: 1px solid green;
+
+    }
+
+    &__second-img {
+        width: 20%;
+        padding: 1rem;
+
+        & img {
+            max-width: 100%;
+            border: 1px solid red;
+
+             
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+        }
+    }
+
+    &__write-up {
+        width: 50%;
+        // border: 2px solid green;
+        margin: 0rem 2rem 0 2rem;
+        padding: 1rem;
+        height: 50vh;
+
+
+        & > p{
+            font-size: 2rem;
+        }
+    }
+
+    &__title{
+        font-size: 3rem;
+    }
+
+    &__buttons{
+        margin-top: 5rem;
+        // border: 1px solid blue;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+      
+        
+    }
+
+    &__front{
+        padding: 1.5rem 2.5rem;
+        background-color: rgb(245, 111, 111);
+        color: white;
+    }
+
+    &__front,
+    &__back{
+        outline: none;
+        cursor: pointer;
+        border-radius: 7px;
+        border: none;
+        font-weight: bold;
+    }
+    &__back{
+        padding: 1.5rem 2.5rem;
+        color: black;
+    }
+}

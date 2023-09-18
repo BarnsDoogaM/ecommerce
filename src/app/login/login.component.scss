@@ -1,0 +1,43 @@
+.contact {
+    margin-top: 10rem;
+
+    .form {
+        width: 40%;
+        margin: auto;
+        background-color: white;
+        box-shadow: 0rem 0rem .1rem rgba(0, 0, 0, .8), 0rem 0rem .3rem rgba(0, 0, 0, .8);
+        padding: 1rem;
+        font-size: 1.4rem;
+
+        &__first {
+            margin: 1rem 0;
+
+        }
+
+        &__second {
+            margin: .5rem 0;
+        }
+
+        &__second-input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.2rem;
+            outline: none;
+        }
+
+        &__btn {
+            font-size: 1.4rem;
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            background-color: rgb(14, 14, 177);
+            outline: none;
+            border-radius: 7px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+
+
+}

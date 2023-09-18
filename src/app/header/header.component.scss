@@ -69,14 +69,10 @@
     }
 
     &__cart {
-        & a {
-            font-size: 4rem;
-            color: black;
-            position: relative;
-        }
 
-        & p{
-            
+
+        & p {
+
             background-color: purple;
             // padding: 2rem;
             top: 1rem;
@@ -93,4 +89,22 @@
             align-items: center;
         }
     }
+
+    &__login {
+        font-size: 2rem;
+        text-decoration: none;
+        margin-right: 1.5rem;
+        color: white;
+        background-color: blue;
+        padding: .5rem;
+        border-radius: 7px;
+        font-weight: bold;
+    }
+
+    &__cart-icon {
+        font-size: 4rem;
+        color: black;
+        position: relative;
+    }
+
 }

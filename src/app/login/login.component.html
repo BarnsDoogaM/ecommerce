@@ -1,1 +1,47 @@
-<p>login works!</p>
+<section class="contact">
+
+    <div class="form">
+
+        <form class="form__main" (ngSubmit)="save()" [formGroup]="customerForm">
+            <h2 style="text-align: center; font-size: 1.4rem;">LOGIN</h2>
+           
+            <div class="form__first">
+                <label for="first">User Name</label>
+                <input class="form__second-input" type="text" placeholder="Please enter user name" formControlName="userName" [ngClass]="{'isvalid': (customerForm.get('userName').touched || customerForm.get('userName').dirty)
+                     && !customerForm.get('userName').valid }">
+                <span>
+                    <span class="form__IsInvalid" *ngIf="customerForm.get('userName').errors?.['required'] 
+                         && customerForm.get('userName').touched">
+                        please enter user Name
+                    </span>
+                    <span class="form__IsInvalid" *ngIf="customerForm.get('userName').errors?.['minlength']">
+                        user name must be longer than 2 characters
+                    </span>
+                </span>
+            </div>
+
+            <div class="form__third">
+                <div class="form__second">
+                    <label for="first">Password</label>
+                    <input class="form__second-input" type="password" placeholder="Please enter password" formControlName="password" [ngClass]="{'isvalid': (customerForm.get('password').touched || customerForm.get('password').dirty)
+                    && !customerForm.get('password').valid }">
+                    <span>
+                        <span class="form__IsInvalid" *ngIf="customerForm.get('password').errors?.['required']
+                         && customerForm.get('password').touched">
+                            password is required
+                        </span>
+                    </span>
+                </div>
+            </div>
+           
+            <div class="form__inline">
+                <button class="form__btn" type="submit"
+                    [title]="customerForm.valid ? 'save your entered values' : 'disabled untill form data is valid' "
+                    [disabled]="!customerForm.valid">Login</button>
+
+            </div>
+        </form>
+    </div>
+    <span>
+    </span>
+</section>

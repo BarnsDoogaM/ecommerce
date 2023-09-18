@@ -1,0 +1,39 @@
+.success{
+    margin-top: 7rem;
+    min-height: 20vh;
+  background-color: white;
+//   border: 1px solid red;
+    &__container{
+        // border: 1px solid green;
+        width: 45%;
+        margin: 19rem auto;
+        border-radius: 6px;
+        box-shadow: 0 0 .2rem rgba(0, 0, 0, .5);
+        padding: 2rem;
+    }
+
+    &__order{
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        line-height: 3;
+    }
+
+    &__massage{
+        font-size: 2rem;
+        line-height: 2;
+        text-align: center;
+    }
+    & button{
+        cursor: pointer;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        background-color: blue;
+        color: white;
+        font-size: 1.6rem;
+        margin-left: 20rem;
+        outline: none;
+        border: none;
+        border-radius: 7px;
+    }
+}

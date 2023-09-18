@@ -45,3 +45,9 @@ html{
 body{
     line-height: 1.5;
 }
+
+.form{
+    &__IsInvalid{
+        color: red;
+    }
+}
