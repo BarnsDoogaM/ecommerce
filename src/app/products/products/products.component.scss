@@ -52,4 +52,15 @@
 
         }
     }
+
+    &__details{
+        text-align: center;
+        font-size: 1.6rem;
+        padding-top: 1rem;
+        line-height: 1.6;
+    }
+
+    &__rating{
+        color: rgb(70, 185, 70);
+    }
 }
