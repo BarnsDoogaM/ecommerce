@@ -4,6 +4,21 @@
     &__container {
         width: 70%;
         margin-left: 7rem;
+
+
+        @media only screen and (min-width: 20em) {
+            width: 90%;
+            margin-left: unset;
+            margin: 0 auto;
+            // border: 1px solid black;
+            line-height: 3;
+        }
+
+        @media only screen and (min-width: 75em) {
+            margin-left: 7rem;
+            width: 70%;
+            // border: none;
+        }
     }
 
     &__bold {
