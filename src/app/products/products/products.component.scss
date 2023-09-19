@@ -2,13 +2,24 @@
     background-color: white;
     margin-top: 7rem;
 
+
     &__container {
         width: 100%;
         min-height: 100vh;
+
+        
+        @media only screen and (min-width: 20em) {
+           margin-top: 12rem;
+        }
+        @media only screen and (min-width: 75em) {
+           margin-top: unset;
+        }
+
     }
 
     &__anchor {
         text-decoration: none;
+        backdrop-filter: blur(80px);
         display: flex;
         width: 22%;
         overflow: hidden;
@@ -23,7 +34,17 @@
         transition: all .2s;
         padding: 2rem;
 
-        &:hover{
+        @media only screen and (min-width: 20em) {
+            width: 90%;
+            margin: 3rem auto 0rem auto;
+        }
+
+        @media only screen and (min-width: 75em) {
+            width: 22%;
+            margin: 4rem 2rem 1rem;
+         }
+
+        &:hover {
             transform: translateY(-5px);
             box-shadow: 0 0 1.5rem rgba(0, 0, 0, .2);
         }
@@ -54,14 +75,14 @@
         }
     }
 
-    &__details{
+    &__details {
         text-align: center;
         font-size: 1.6rem;
         padding-top: 1rem;
         line-height: 1.6;
     }
 
-    &__rating{
+    &__rating {
         color: rgb(70, 185, 70);
     }
 }

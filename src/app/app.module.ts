@@ -12,6 +12,7 @@ import { DetailsComponent } from './details/details.component';
 import { SuccessComponent } from './success/success.component';
 import { ErrorComponent } from './error/error.component';
 import { PaymentComponent } from './payment/payment.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { PaymentComponent } from './payment/payment.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

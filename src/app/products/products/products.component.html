@@ -1,326 +1,36 @@
 <section class="products">
     <div class="products__container">
-        <div class="products__card-box">
+        <div class="products__card-box" *ngIf="products$ | async as products">
             <a class="products__anchor" routerLink="/details">
                 <div class="products__card-box">
                     <div class="products__card">
-                        <div class="products__box">
+                        <div class="products__box" *ngFor="let product of products">
                             <div class="products__image">
-                                <img src="../../../assets/head pan.jpg" alt="">
-                                </div>
+                                <img [src]="product.thumbnail" alt="">
+                            </div>
                             <div class="products__details">
                                 <h1 class="products__title">
-                                    Samsung galaxy s4
+                                    {{product.title}}
                                 </h1>
                                 <div class="products__price">
-                                    price: $3
+                                   {{product.price}}
                                 </div>
-                                <div class="products__description">
-                                    Description: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque.
-                                </div>
-                               
                                 <div class="products__rating">
-                                    rating: 3.6
+                                    {{product.rating}}
                                 </div>
                                 <div class="products__category">
-                                    Brand: apple
+                                    Brand: {{product.brand}}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
-            <a class="products__anchor" routerLink="/details">
-                <div class="products__card-box">
-                    <div class="products__card">
-                        <div class="products__box">
-                            <div class="products__image">
-                                <img src="../../../assets/head pan.jpg" alt="">
-                                </div>
-                            <div class="products__details">
-                                <h1 class="products__title">
-                                    Samsung galaxy s4
-                                </h1>
-                                <div class="products__price">
-                                    price: $3
-                                </div>
-                                <div class="products__description">
-                                    Description: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque.
-                                </div>
-                               
-                                <div class="products__rating">
-                                    rating: 3.6
-                                </div>
-                                <div class="products__category">
-                                    Brand: apple
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="products__anchor" routerLink="/details">
-                <div class="products__card-box">
-                    <div class="products__card">
-                        <div class="products__box">
-                            <div class="products__image">
-                                <img src="../../../assets/head pan.jpg" alt="">
-                                </div>
-                            <div class="products__details">
-                                <h1 class="products__title">
-                                    Samsung galaxy s4
-                                </h1>
-                                <div class="products__price">
-                                    price: $3
-                                </div>
-                                <div class="products__description">
-                                    Description: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque.
-                                </div>
-                               
-                                <div class="products__rating">
-                                    rating: 3.6
-                                </div>
-                                <div class="products__category">
-                                    Brand: apple
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="products__anchor" routerLink="/details">
-                <div class="products__card-box">
-                    <div class="products__card">
-                        <div class="products__box">
-                            <div class="products__image">
-                                <img src="../../../assets/head pan.jpg" alt="">
-                                </div>
-                            <div class="products__details">
-                                <h1 class="products__title">
-                                    Samsung galaxy s4
-                                </h1>
-                                <div class="products__price">
-                                    price: $3
-                                </div>
-                                <div class="products__description">
-                                    Description: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque.
-                                </div>
-                               
-                                <div class="products__rating">
-                                    rating: 3.6
-                                </div>
-                                <div class="products__category">
-                                    Brand: apple
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="products__anchor" routerLink="/details">
-                <div class="products__card-box">
-                    <div class="products__card">
-                        <div class="products__box">
-                            <div class="products__image">
-                                <img src="../../../assets/head pan.jpg" alt="">
-                                </div>
-                            <div class="products__details">
-                                <h1 class="products__title">
-                                    Samsung galaxy s4
-                                </h1>
-                                <div class="products__price">
-                                    price: $3
-                                </div>
-                                <div class="products__description">
-                                    Description: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque.
-                                </div>
-                               
-                                <div class="products__rating">
-                                    rating: 3.6
-                                </div>
-                                <div class="products__category">
-                                    Brand: apple
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="products__anchor" routerLink="/details">
-                <div class="products__card-box">
-                    <div class="products__card">
-                        <div class="products__box">
-                            <div class="products__image">
-                                <img src="../../../assets/head pan.jpg" alt="">
-                                </div>
-                            <div class="products__details">
-                                <h1 class="products__title">
-                                    Samsung galaxy s4
-                                </h1>
-                                <div class="products__price">
-                                    price: $3
-                                </div>
-                                <div class="products__description">
-                                    Description: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque.
-                                </div>
-                               
-                                <div class="products__rating">
-                                    rating: 3.6
-                                </div>
-                                <div class="products__category">
-                                    Brand: apple
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="products__anchor" routerLink="/details">
-                <div class="products__card-box">
-                    <div class="products__card">
-                        <div class="products__box">
-                            <div class="products__image">
-                                <img src="../../../assets/head pan.jpg" alt="">
-                                </div>
-                            <div class="products__details">
-                                <h1 class="products__title">
-                                    Samsung galaxy s4
-                                </h1>
-                                <div class="products__price">
-                                    price: $3
-                                </div>
-                                <div class="products__description">
-                                    Description: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque.
-                                </div>
-                               
-                                <div class="products__rating">
-                                    rating: 3.6
-                                </div>
-                                <div class="products__category">
-                                    Brand: apple
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="products__anchor" routerLink="/details">
-                <div class="products__card-box">
-                    <div class="products__card">
-                        <div class="products__box">
-                            <div class="products__image">
-                                <img src="../../../assets/head pan.jpg" alt="">
-                                </div>
-                            <div class="products__details">
-                                <h1 class="products__title">
-                                    Samsung galaxy s4
-                                </h1>
-                                <div class="products__price">
-                                    price: $3
-                                </div>
-                                <div class="products__description">
-                                    Description: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque.
-                                </div>
-                               
-                                <div class="products__rating">
-                                    rating: 3.6
-                                </div>
-                                <div class="products__category">
-                                    Brand: apple
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="products__anchor" routerLink="/details">
-                <div class="products__card-box">
-                    <div class="products__card">
-                        <div class="products__box">
-                            <div class="products__image">
-                                <img src="../../../assets/head pan.jpg" alt="">
-                                </div>
-                            <div class="products__details">
-                                <h1 class="products__title">
-                                    Samsung galaxy s4
-                                </h1>
-                                <div class="products__price">
-                                    price: $3
-                                </div>
-                                <div class="products__description">
-                                    Description: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque.
-                                </div>
-                               
-                                <div class="products__rating">
-                                    rating: 3.6
-                                </div>
-                                <div class="products__category">
-                                    Brand: apple
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="products__anchor" routerLink="/details">
-                <div class="products__card-box">
-                    <div class="products__card">
-                        <div class="products__box">
-                            <div class="products__image">
-                                <img src="../../../assets/head pan.jpg" alt="">
-                                </div>
-                            <div class="products__details">
-                                <h1 class="products__title">
-                                    Samsung galaxy s4
-                                </h1>
-                                <div class="products__price">
-                                    price: $3
-                                </div>
-                                <div class="products__description">
-                                    Description: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque.
-                                </div>
-                               
-                                <div class="products__rating">
-                                    rating: 3.6
-                                </div>
-                                <div class="products__category">
-                                    Brand: apple
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="products__anchor" routerLink="/details">
-                <div class="products__card-box">
-                    <div class="products__card">
-                        <div class="products__box">
-                            <div class="products__image">
-                                <img src="../../../assets/head pan.jpg" alt="">
-                                </div>
-                            <div class="products__details">
-                                <h1 class="products__title">
-                                    Samsung galaxy s4
-                                </h1>
-                                <div class="products__price">
-                                    price: $3
-                                </div>
-                                <div class="products__description">
-                                    Description: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque.
-                                </div>
-                               
-                                <div class="products__rating">
-                                    rating: 3.6
-                                </div>
-                                <div class="products__category">
-                                    Brand: apple
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-           
+        </div>
+        <div class="container__errormessage">
+            <div class="container__error" *ngIf="errorMessage$ | async as errorMessage">
+                {{errorMessage}}
+            </div>
         </div>
     </div>
 </section>

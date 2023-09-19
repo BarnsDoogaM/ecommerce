@@ -1,14 +1,11 @@
 <div class="container">
-    <div class="container__details">
+    <div class="container__details" *ngIf="product$ | async as product">
         <div class="container__images">
             <div class="container__first-img">
-                <img src="../../assets/hamm.jpg" alt="">
+                <img [src]="product.thumbnail" alt="">
             </div>
             <div class="container__second-img">
-                <img src="../../assets/hamar.jpg" alt="">
-                <img src="../../assets/hamar.jpg" alt="">
-                <img src="../../assets/hamar.jpg" alt="">
-                <img src="../../assets/hamar.jpg" alt="">
+                <img [src]="product.images" alt="">
             </div>
         </div>
         
@@ -16,14 +13,14 @@
 
         <div class="container__write-up">
             <h1 class="container__title">
-                samsung gallaxi 9
+                {{product.title}}
             </h1>
 
             <p class="container__description">
-               Description: <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, pariatur?
+               {{product.description}}
             </p>
-            <p>price: $100</p>
-            <p>stock 3456</p>
+            <p>{{product.price | currency}}</p>
+            <p>{{product.stock}}</p>
 
             <div class="container__buttons">
                 <div class="container__toogle">

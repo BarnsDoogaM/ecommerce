@@ -1,3 +1,17 @@
-p{
-    margin-top: 10rem;
+.cart {
+    margin-top: 12rem;
+
+    &__container {
+        width: 70%;
+        margin-left: 7rem;
+    }
+
+    &__bold {
+        font-size: 2.5rem;
+    }
+
+    &__message {
+        text-align: center;
+        font-size: 2rem;
+    }
 }
